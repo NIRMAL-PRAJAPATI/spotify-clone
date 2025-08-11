@@ -142,19 +142,39 @@ body {
 
 #card_container {
     margin: 10px;
-    display: grid;
-  grid: auto / auto auto auto auto auto;
+    display: flex;
+    overflow-x: scroll;
+}
+
+#card_container::-webkit-scrollbar {
+    height: 0px;
+}
+
+#card_container::-webkit-scrollbar-track {
+    background: rgb(15, 15, 15);
+    border-radius: 10px;
+}
+
+#card_container::-webkit-scrollbar-thumb {
+    background: rgb(60, 60, 60);
+    border-radius: 10px;
+}
+
+#card_container::-webkit-scrollbar-thumb:hover {
+    background: rgb(80, 80, 80);
 }
 
 .song_card, .podcast_card {
     background-color: rgb(27, 27, 27);
     height: 240px;
-    width: 75%;
+    width: 158px;
+    min-width: 158px;
     border-radius: 5px;
     color: white;
     padding: 15px 15px 0px 15px;
     margin: 10px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .song_card:hover {
@@ -170,15 +190,6 @@ body {
 
 
 /* for responsive design */
-@media (min-width: 1500px) {
-    #card_container {
-        grid: auto / auto auto auto auto auto auto;
-    }
-
-    .song_card, .podcast_card {
-        width: 60%;
-    }
-}
 
 @media (max-width: 1200px) {
     #card_container {

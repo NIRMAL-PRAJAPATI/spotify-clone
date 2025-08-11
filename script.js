@@ -1,4 +1,3 @@
-
 var windowWidth = window.innerWidth;
 var navbar = document.getElementById("navbar");
 let leftbox = document.querySelector("#left_box");
