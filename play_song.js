@@ -69,7 +69,6 @@ const getSongDuration = (url) => {
     });
 };
 
-// Generate random release date in DD/MM/YYYY format
 const getRandomDate = () => {
     const start = new Date(2020, 0, 1);
     const end = new Date();
